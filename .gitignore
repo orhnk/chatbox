@@ -171,6 +171,8 @@ electron-builder.env
 
 .vscode
 
+# Direnv
+.direnv/
 
 **/routeTree.gen.ts
 
