@@ -239,6 +239,60 @@ npm run package
 npm run package:all
 ```
 
+## Build with Nix
+
+### Prerequisites
+
+Make sure you have Nix installed with flakes enabled:
+
+```bash
+# Enable flakes in your Nix configuration or use:
+export NIX_CONFIG="experimental-features = nix-command flakes"
+```
+
+### Development Environment
+
+1. Clone the repository:
+```bash
+git clone https://github.com/chatboxai/chatbox.git
+cd chatbox
+```
+
+2. Enter the development shell:
+```bash
+nix develop
+```
+
+3. Install dependencies and start development:
+```bash
+npm install
+npm run dev
+```
+
+### Building with Nix
+
+Build the application using Nix:
+```bash
+nix build
+```
+
+Run the application directly:
+```bash
+nix run
+```
+
+### Installation
+
+Install Chatbox to your Nix profile:
+```bash
+nix profile install .
+```
+
+Or run without installing:
+```bash
+nix run github:chatboxai/chatbox
+```
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=chatboxai/chatbox&type=Date)](https://star-history.com/#chatboxai/chatbox&Date)
